@@ -28,6 +28,7 @@ img.write(output_file_path)
 convert = MiniMagick::Tool::Convert.new
 convert << output_file_path
 convert.negate
+convert.deskew("80%")
 convert.threshold("007%")    # I couldn't prevent myself
 convert.negate
 convert << output_file_path
