@@ -18,9 +18,14 @@ OCR parser meant to be used to register payments
 
 ### Run
 
-    ruby script.rb <input_image>
+  $ ./folder.sh
+  $ gem install
 
-Outputs a file with a name starting with `output`, that's the "improved" image. Also prints its content.
+The image to convert should be placed inside folder `images`, and then run
+
+  $ ruby script.rb <input_image_name>
+
+Outputs a file in folder `outputs`, that contains the name of the input_image_name
 
 ## Roadmap
 
