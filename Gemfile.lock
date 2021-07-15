@@ -1,0 +1,15 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    mini_magick (4.11.0)
+    rtesseract (3.1.2)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  mini_magick
+  rtesseract
+
+BUNDLED WITH
+   2.2.23
