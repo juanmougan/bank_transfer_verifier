@@ -15,6 +15,8 @@ OCR parser meant to be used to register payments
 1. Install Imagemagick `brew install imagemagick    # Or apt-get, or whatever.`
 
 2. Install Tesseract `brew install tesseract                 # Or apt-get, or whatever.`
+    
+    i. Also install Tesseract's modules: `sudo apt-get install esseract-ocr-spa`
 
 ### Run
 

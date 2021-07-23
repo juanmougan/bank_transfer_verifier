@@ -1,5 +1,5 @@
 require "mini_magick"       			# WARN: https://stackoverflow.com/a/31193536/3923525
-require "rtesseract"					# TODO brew install tesseract
+require "rtesseract"					# TODO brew install tesseract and the languages
 
 def get_input_output_file_paths
 	base_dir = Dir.pwd
@@ -43,7 +43,7 @@ end
 
 def parse_ocr(output_file_path)
 	# Parse OCR
-	image_text_content = RTesseract.new(File.basename(output_file_path))
+	image_text_content = RTesseract.new(File.basename(output_file_path), lang: 'spa')
 	return image_text_content.to_s
 end
 
