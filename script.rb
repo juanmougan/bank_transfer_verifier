@@ -7,6 +7,8 @@ def get_input_output_file_paths
 	input_file_name = ARGV[0]
 	puts "input name #{input_file_name}"
 	input_file_path = File.join(base_dir, input_file_name)
+	input_file_name = File.basename(input_file_path)
+	puts "input_file_path #{input_file_path}"
 	output_file_name = "output_#{Time.new.usec}_#{input_file_name}"
 	puts "output_file_name: #{output_file_name}"
 	output_file_path = File.new(output_file_name, "w")
@@ -22,15 +24,6 @@ def load_grey_scaled_image(input_file_path, output_file_path)
 end
 
 def clean_up_image(output_file_path)
-	# Cleaning
-	#MiniMagick::Tool::Magick.new do |magick|
-	#    magick << output_file_path
-	#    magick.negate
-	#    magick.threshold("007%")    # I couldn't prevent myself
-	#    magick.negate
-	#    magick << output_file_path
-	#end
-	
 	# Clean up image
 	convert = MiniMagick::Tool::Convert.new
 	convert << output_file_path
